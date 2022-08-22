@@ -1,7 +1,5 @@
 package Mumbling;
 
-import java.util.Locale;
-
 public class Mumbling {
 
     public static void main(String[] args) {
@@ -12,7 +10,7 @@ public class Mumbling {
 
     public static String accum(String s) {
 
-        /**
+        /*
          * The examples below show you how to write function:
          * Examples:
          * accum("abcd") -> "A-Bb-Ccc-Dddd"
@@ -33,6 +31,6 @@ public class Mumbling {
         }
 
         // Devolvemos el valor concatenando cada elemento del array en un sólo número
-        return String.valueOf(String.join("-", letters));
+        return String.join("-", letters);
     }
 }

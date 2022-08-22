@@ -1,8 +1,5 @@
 package ConsecutiveStrings;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class ConsecutiveStrings {
 
     /*
@@ -40,8 +37,7 @@ public class ConsecutiveStrings {
     public static String longestConsec(String[] strarr, int k) {
 
         String strFirstLongest = "";
-        String concatenated = "";
-        List<String> concArray = new ArrayList<String>();
+        String concatenated;
 
         // Si el array está vacio o K <=0 o K es mayor que array.length, devolver "Nothing"
         if (strarr.length == 0 || k <= 0 || k > strarr.length) {
@@ -53,9 +49,8 @@ public class ConsecutiveStrings {
 
             concatenated = "";
             for (int j = 0; j < k; j++) {
-                concatenated = concatenated + strarr[i+j];
+                concatenated += strarr[i+j];
             }
-            concArray.add(concatenated);
 
             // Quedarse con el primer elemento de mayor longitud
             if (concatenated.length() > strFirstLongest.length()) {
